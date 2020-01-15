@@ -31,6 +31,43 @@ let beige = Color(hue: 69, saturation: 6, brightness: 87, alpha: 100)
 
 // Begin your solution here...
 
+canvas.fillColor = pink
+canvas.drawRectangle(at: Point(x:0, y:0), width: 400, height: 600)
+
+canvas.fillColor = black
+for positionX in stride(from: 0, to: 16, by: 4) {
+    canvas.drawRectangle(at: Point(x:11+14*positionX, y:0), width: 14, height: 25+14*positionX)
+}
+
+for reverse in stride(from: 0, to: 16, by: 4){
+    canvas.drawRectangle(at: Point(x:400-25-14*reverse, y:0), width: 14, height: 25+14*reverse)
+}
+
+for positionX in stride(from: 0, to: 16, by: 4) {
+    canvas.drawRectangle(at: Point(x:0, y:11+14*positionX), width: 25+14*positionX, height:14)
+}
+
+for reverse in stride(from: 0, to: 16, by: 4){
+    canvas.drawRectangle(at: Point(x:0, y:400-25-14*reverse), width:25+14*reverse , height:14 )
+}
+
+for rightside in stride(from: 0, to: 16, by: 4) {
+    canvas.drawRectangle(at: Point(x:400-25-14*rightside,y:11+14*rightside), width: 11+14*rightside+25, height: 14)
+}
+
+for rightside in stride(from: 0, to: 16, by: 4) {
+    canvas.drawRectangle(at: Point(x:400-25-14*rightside,y:400-25-14*rightside), width: 11+14*rightside+25, height: 14)
+}
+
+
+for positionX in stride(from: 0, to: 16, by: 4) {
+    canvas.drawRectangle(at: Point(x:11+14*positionX, y:400-25-14*positionX), width: 14, height: 25+14*positionX)
+}
+
+for positionX in stride(from: 0, to: 16, by: 4) {
+    canvas.drawRectangle(at: Point(x:400-25-14*positionX, y:400-25-14*positionX), width: 14, height: 25+14*positionX)
+}
+
 
 /*:
  ## Use Source Control
